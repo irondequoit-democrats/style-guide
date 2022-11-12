@@ -1,0 +1,148 @@
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+svg {
+  fill: var(--primary);
+}
+
+.logo {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.logo p {
+  font-size: 32px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.full-logo svg {
+  width: 100px;
+  height: auto;
+}
+
+.partial-logo svg {
+  width: 50px;
+  height: auto;
+}
+.partial-logo {
+  gap: 10px;
+  margin-top: 15px;
+}
+.partial-logo.big svg {
+  width: 83px;
+}
+
+.small-logo {
+  gap: 5px;
+  margin-top: 15px;
+}
+.small-logo svg {
+  width: 30px;
+  height: auto;
+}
+
+.alternate-small-logo {
+  display: block;
+  position: relative;
+  height: 80px;
+  width: 70px;
+}
+.alternate-small-logo > * {
+  position: absolute;
+}
+.alternate-small-logo p {
+  color: var(--background);
+  left: 18px;
+  top: 15px;
+}
+.alternate-small-logo svg {
+  width: 60px;
+}
+.alternate-small-logo.meet svg {
+  fill: var(--secondary);
+}
+.alternate-small-logo.meet p {
+  font-size: 80px;
+  color: var(--primary);
+  left: 44px;
+  top: 0;
+}
+
+.colors {
+  display: flex;
+  gap: 20px;
+}
+.color {
+  --minor: 30px;
+  width: 150px;
+  height: 150px;
+  border-top: 150px solid var(--color);
+  position: relative;
+  padding-top: calc(var(--minor) + 5px);
+}
+.color:before,
+.color:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: var(--minor);
+  background: var(--color-darker);
+  top: 0;
+  left: 0;
+}
+.color:after {
+  left: 50%;
+  background: var(--color-lighter);
+}
+
+body {
+  --primary: #1030bc;
+  --primary-darker: #07134b;
+  --primary-lighter: #b4c0f8;
+
+  --secondary: #10bc46;
+  --secondary-darker: #053815;
+  --secondary-lighter: #8ef5af;
+
+  --tertiary: #e1be29;
+  --tertiary-darker: #362d08;
+  --tertiary-lighter: #f5e9b8;
+
+  --highlight: #bc1086;
+  --highlight-darker: #4b0734;
+  --highlight-lighter: #fcd9f1;
+
+  --text: #333;
+  --background: #f6f6f6;
+}
+
+/* Kristen chose https://coolors.co/1030bc-076188-365940-88ac11-820d4f */
+/* I modified to https://coolors.co/1030bc-10bc46-bc9c10-bc1086-076188 */
+.primary {
+  --color: var(--primary);
+  --color-darker: var(--primary-darker);
+  --color-lighter: var(--primary-lighter);
+}
+
+.secondary {
+  --color: var(--secondary);
+  --color-darker: var(--secondary-darker);
+  --color-lighter: var(--secondary-lighter);
+}
+
+.tertiary {
+  --color: var(--tertiary);
+  --color-darker: var(--tertiary-darker);
+  --color-lighter: var(--tertiary-lighter);
+}
+
+.highlight {
+  --color: var(--highlight);
+  --color-darker: var(--highlight-darker);
+  --color-lighter: var(--highlight-lighter);
+}
